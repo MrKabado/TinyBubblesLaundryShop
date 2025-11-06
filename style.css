@@ -9,6 +9,8 @@ body{
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
+  background-attachment: fixed;
+  height: max-content;
 }
 
 /* HEADER */
@@ -112,11 +114,15 @@ body{
 
 .feature-card img{ 
   width:65px;
-  border-right: 2px solid white;
+ }
+
+ .feature-card div {
+  border-left: 2px solid white;
+  padding-left: 10px;
  }
 .feature-card h3{ font-size:15px; margin-bottom:5px; }
 .feature-card .small{ font-size:13px; margin-bottom:6px; }
-.feature-card p{ font-size:11px; line-height:1.4; width: 200px;}
+.feature-card p{ font-size:11px; line-height:1; width: 200px;}
 
 /* RESPONSIVE */
 @media(max-width:768px){
