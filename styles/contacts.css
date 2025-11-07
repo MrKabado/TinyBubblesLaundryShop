@@ -5,7 +5,7 @@
 
 /* BODY BACKGROUND */
 body{
-  background-image:url("images/background-image.png");
+  background-image: url('/images/background-image.png');
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -35,4 +35,82 @@ body{
   text-decoration:none;
   color:#789462;
   font-weight:500;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+}
+
+.intro-holder, .input-holder {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-holder h1 {
+  color: #2E5D4A;
+}
+
+.intro-holder p {
+  color: #333;
+}
+
+.info-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* INPUTS */
+.input-holder {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow:0 2px 6px rgba(0,0,0,.3);
+}
+
+form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow:0 2px 6px rgba(0,0,0,.3);
+}
+
+form button {
+  width: fit-content;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background-color: #2E5D4A;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  opacity: 90%;
+  transform: scale(1.03);
 }

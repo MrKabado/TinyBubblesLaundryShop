@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tiny Bubbles</title>
     <link rel="stylesheet" href="/styles/services.css" />
+    <link rel="icon" type="image/png" href="images/logo.png">
   </head>
   <body>
     <header class="header">
@@ -92,85 +93,6 @@
           </div>
         </div>
       </div>
-
-      <div class="weight-calculator">
-        <div>
-          <h1>CALCULATE YOUR LAUNDRY</h1>
-
-          <form>
-            <h2>Choose laundry service</h2>
-            <div class="service-choice">
-              <button id="washOrDry" onclick="selectService('washOrDry'); return false;">Wash or Dry</button>
-              <button id="washAndDry" onclick="selectService('washAndDry'); return false;">Wash and Dry</button>
-            </div>
-
-            <div>
-              <h2>Input weight</h2>
-              <input type="number" id="inputedWeight"/>
-              <button onclick="calculateWeight(event)">Calculate</button>
-            </div>
-
-            <div>
-              <h2>Total Amount:</h2>
-              <p id="display-amount"></p>
-            </div>
-          </form>
-        </div>
-      </div>
     </main>
   </body>
-
-  <script>
-    let washOrDry = false;
-let washAndDry = false;
-
-const washOrDryBtn = document.getElementById("washOrDry");
-const washAndDryBtn = document.getElementById("washAndDry");
-const display = document.getElementById("display-amount");
-
-// handle service selection
-function selectService(service) {
-  if (service === "washOrDry") {
-    washOrDry = true;
-    washAndDry = false;
-    washOrDryBtn.classList.add("active-service");
-    washAndDryBtn.classList.remove("active-service");
-  } else if (service === "washAndDry") {
-    washAndDry = true;
-    washOrDry = false;
-    washAndDryBtn.classList.add("active-service");
-    washOrDryBtn.classList.remove("active-service");
-  }
-}
-
-// handle calculation
-function calculateWeight(event) {
-  event.preventDefault();
-  const weight = Number(document.getElementById("inputedWeight").value);
-  let amount = 0;
-
-  if (washOrDry) {
-    if (weight <= 7) amount = 95;
-    else if (weight === 8) amount = 115;
-    else if (weight >= 9 && weight <= 15) amount = 220;
-    else if (weight === 16) amount = 230;
-    else amount = "Weight exceeds limit";
-  } 
-  else if (washAndDry) {
-    if (weight <= 7) amount = 180;
-    else if (weight === 8) amount = 200;
-    else if (weight >= 9 && weight <= 15) amount = 380;
-    else if (weight === 16) amount = 400;
-    else amount = "Weight exceeds limit";
-  } 
-  else {
-    alert("Please select a service");
-    return;
-  }
-
-  display.innerText = `P${amount}`;
-}
-
-
-  </script>
 </html>
