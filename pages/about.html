@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tiny Bubbles</title>
     <link rel="stylesheet" href="/styles/about.css" />
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
   </head>
   <body>
     <header class="header">
@@ -20,70 +20,68 @@
       </nav>
     </header>
 
-    <main style="padding: 50px;">
-      <div 
-        class="intro-holder" 
-        style="text-align: center; display: flex; flex-direction: column; gap: 20px; align-items: center;">
-        <h1 style="color: #2E5D4A;">Tiny Bubbles Laundry Shop</h1>
-        <p>
+    <main class="about-main">
+      <div class="intro-holder">
+        <h1 class="about-heading">Tiny Bubbles Laundry Shop</h1>
+        <p class="about-description">
           We are a local laundry service dedicated to making laundry day easy
           and worry-free. Our shop provides clean, careful, and reliable laundry
           care for busy individuals, families, and small businesses.
         </p>
-        <div class="image-holder">
+        <div class="profile-card">
           <img 
             src="/images/StockProfile.jpg" 
             alt="StockProfile"
-            style="width: 200px; border-radius: 100%; border: 2px solid #688157;"
+            class="profile-image"
           >
 
-          <h2 style="color: #2E5D4A;">Mary Anne M. Canete</h2>
-          <p>Owner</p>
+          <h2 class="profile-name">Mary Anne M. Canete</h2>
+          <p class="profile-role">Owner</p>
         </div>
 
-        <div style="margin-bottom: 40px;">
-          <h3 style="text-align: left; margin-bottom: 10px;">Short Background</h3>
-          <div style="box-shadow:0 2px 6px rgba(0,0,0,.2); text-align: justify; background-color: #DDDDDD; padding: 10px; border-radius: 10px;">
+        <section class="about-section">
+          <h3 class="section-heading">Short Background</h3>
+          <div class="section-card">
             <p>The laundry shop was originally owned by another person. When it first started, it experienced a slow progress. However, just as the business starts to grow and gain more customer that can no longer be managed, the owner decided to sell it because he can no longer managed both of his stores at the same time. Seeing the potential of it, Marry Anne M. Canete decided to purchase it and continue its operations. With the help of her stepson, John Gave, she successfully maintained it and improved the business, which is now running smoothly.</p>
           </div>
-        </div>
+        </section>
 
-        <div style="width: 100%; margin-bottom: 40px;">
-          <h3 style="text-align: left;">What we do</h3>
-          <div style="display: flex; justify-content: space-evenly;">
-            <img src="/images/what-we-do-1.png" alt="Images" style="width: 300px;">
-            <img src="/images/what-we-do-2.png" alt="Images" style="width: 300px;">
-            <img src="/images/what-we-do-3.png" alt="Images" style="width: 300px;">
+        <section class="gallery-section">
+          <h3 class="section-heading">What we do</h3>
+          <div class="gallery-images">
+            <img src="/images/what-we-do-1.png" alt="Laundry service" class="gallery-image">
+            <img src="/images/what-we-do-2.png" alt="Laundry service" class="gallery-image">
+            <img src="/images/what-we-do-3.png" alt="Laundry service" class="gallery-image">
           </div>
-        </div>
+        </section>
 
-        <div style="width: 100%;">
-          <h3 style="text-align: left;">Location</h3>
-          <p style="text-align: left; margin-bottom: 10px;">Tiny Bubbles Laundry Shop is located at Sitio Ylaya, Ibabao, Cordova.</p>
-          <div style="display: flex; width: 100%; gap: 20px; justify-content: space-between;">
-            <div style="background-color: #DDDDDD; border-radius: 10px; box-shadow:0 2px 6px rgba(0,0,0,.3);">
+        <section class="location-section">
+          <h3 class="section-heading">Location</h3>
+          <p class="location-description">Tiny Bubbles Laundry Shop is located at Sitio Ylaya, Ibabao, Cordova.</p>
+          <div class="location-cards">
+            <div class="location-card">
               <img src="/images/map-view.png" 
                 alt="map-view" 
-                style="width: 550px; height: 320px; border-top-left-radius: 10px; border-top-right-radius: 10px;"
+                class="location-image"
               >
-              <div style="padding: 10px; text-align: left;">
-                <h1 style="font-size: 25px;">Map View</h1>
+              <div class="location-info">
+                <h2 class="location-title">Map View</h2>
                 <p>Aerial view of Ibabao Rd area in Cordova, Cebu</p>
               </div>
             </div>
-            <div style="background-color: #DDDDDD; border-radius: 10px; box-shadow:0 2px 6px rgba(0,0,0,.3);">
+            <div class="location-card">
               <img 
                 src="/images/street-view.png"  
                 alt="street-view" 
-                style="width: 550px; height: 320px; border-top-left-radius: 10px; border-top-right-radius: 10px;"
+                class="location-image"
               >
-              <div style="padding: 10px; text-align: left;">
-                <h1 style="font-size: 25px;">Street View</h1>
+              <div class="location-info">
+                <h2 class="location-title">Street View</h2>
                 <p>Laundromat facility in the area</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
   </body>

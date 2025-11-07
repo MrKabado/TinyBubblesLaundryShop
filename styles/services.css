@@ -37,82 +37,77 @@ body{
   font-weight:500;
 }
 
+/* SERVICES LAYOUT */
+.services-main{
+  padding:60px 20px 90px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+}
+
+.services-title{
+  color:#789462;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-align:center;
+  font-size: 40px;
+}
+
+.services-wrapper{
+  width:min(1100px, 100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+}
+
+.services-banner{
+  width:80%;
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
 .pricing {
-  display: flex;
-  width: 100%;
-  width: 50%;
-  gap: 50px;
-  color: white;
-  margin-top: -50px;
+  width:80%;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:32px;
+  color:white;
 }
 
 .pricing-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  width: 50%;
-  background-color: #789462;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.pricing-card table, .pricing table {
-  width: 100%;
-  border-collapse: collapse;
+  display:flex;
+  flex-direction:column;
+  background-color:#789462;
+  padding:24px;
+  border-radius:12px;
+  gap:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
 .pricing-card h2 {
-  text-align: center;
+  text-align:center;
+  font-size:1.5rem;
 }
 
-.pricing-card th, .pricing th, .pricing-card td, .pricing td {
-  padding: 8px;
-  text-align: left;
+.pricing-card table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:1rem;
 }
 
-main {
-  padding: 20px;
+.pricing-card td:first-child{
+  font-weight:600;
 }
 
-/* ===== WEIGHT CALCULATOR FORM ===== */
-.weight-calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 60px;
+.pricing-card td{
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.25);
 }
 
-.weight-calculator > div {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  background-color: #EDEDED;
-  border-radius: 10px;
-  padding: 30px 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.weight-calculator h1 {
-  color: #789462;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 25px;
-}
-
-.weight-calculator form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 100%;
-}
-
-.weight-calculator h2 {
-  color: #383838;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+.pricing-card tr:last-child td{
+  border-bottom:none;
 }
 
 /* Service choice buttons */
@@ -145,41 +140,78 @@ main {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
 }
 
-/* Input and Calculate button */
-form input[type="number"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  font-size: 1rem;
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px){
+  .header{
+    padding:16px 32px;
+  }
 }
 
-form input[type="number"]:focus {
-  border-color: #789462;
+@media (max-width: 992px){
+  .pricing{
+    gap:24px;
+  }
+
+  .services-banner{
+    max-width:90%;
+  }
 }
 
-form button[type="submit"],
-form button:not(.service-choice button) {
-  background-color: #2E5D4A;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+@media (max-width: 768px){
+  .header{
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .nav-links{
+    width:100%;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    font-size:0.9rem;
+  }
+
+  .services-main{
+    padding:40px 16px 70px;
+  }
+
+  .services-wrapper{
+    gap:24px;
+  }
+
+  .pricing{
+    grid-template-columns:1fr;
+  }
+
+  .services-banner{
+    max-width:100%;
+  }
 }
 
-form button:hover {
-  background-color: #6A8458;
-}
+@media (max-width: 576px){
+  .header{
+    padding:12px 16px;
+  }
 
-/* Total amount section */
-#display-amount {
-  background-color: white;
-  color: #333;
-  text-align: center;
-  padding: 8px;
-  border-radius: 6px;
-  font-weight: bold;
+  .logo{
+    font-size:1.3rem;
+  }
+
+  .nav-links{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+    font-size:0.85rem;
+  }
+
+  .services-title{
+    letter-spacing:1.2px;
+  }
+
+  .pricing-card{
+    padding:20px;
+  }
+
+  .pricing-card table{
+    font-size:0.95rem;
+  }
 }
